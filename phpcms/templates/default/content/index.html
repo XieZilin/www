@@ -1,0 +1,465 @@
+
+
+{template "content","header"}
+<script type="text/javascript" src="{JS_PATH}MSClass.js"></script>
+
+<link href="{CSS_PATH}ys_index.css" rel="stylesheet" type="text/css" />
+
+<div class="banner">
+<!-- indexCon start -->
+<div class="indexCon fl">
+    <div class="flashBanner">
+        <a href="#"><img class="bigImg"/></a>
+          <div class="mask"></div>
+          <div class="mask_div">
+{pc:get sql="SELECT setting FROM allwww_poster WHERE spaceid = 11 AND type='images' AND disabled=0 ORDER BY listorder DESC" num="4"}
+{loop $data $r}
+<?php
+eval("\$narry =$r[setting];");
+?>
+ <img src="{$narry[1][imageurl]}" uri="{$narry[1][imageurl]}" link="{$narry[1][linkurl]}" width="91" height="48"/>
+{/loop}
+{/pc}         
+        </div>
+    </div>
+</div>
+<!-- indexCon end -->
+  
+</div>
+<div class="content">
+
+     <div class="newslist_div">
+          <!--选项卡开始-->
+           <div class="newslist_con">
+                <div class="tab4">
+                    <ul class="menu4">
+                        <li class="active4">{$CATEGORYS[19]['catname']}</li>
+                        <li>{$CATEGORYS[20]['catname']}</li>
+                        <li>{$CATEGORYS[21]['catname']}</li>
+                    </ul>
+                    <div class="con1">
+                    
+                       <div class="flashbox">
+                        <div class="focusNew_out flashlist">
+              {php $i=0;}          
+             {pc:content  action="position" posid="18" catid="19"  thumb="1" order="listorder DESC" num="4"}
+        	 {loop $data $r}
+             {$i++}
+               <div {if $i==1} style="display:block;" {/if} class="f_out">
+                                <span class="f_out_txt"><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],36,'')}</a></span>
+                                <a href="{$r[url]}"><img width="382" height="233" alt="{$r[title]}" src="{thumb($r[thumb],382,233)}" /></a>
+               </div>
+               {/loop}  
+             {/pc}   
+                        </div>
+                        <div class="ceng_div"><img src="{IMG_PATH}index_82.png"></div>
+                        <div class="f_tabs">
+              {php $i=0;}          
+              {pc:content  action="position" posid="18" catid="19"  thumb="1" order="listorder DESC" num="4"}
+        	 {loop $data $r}
+             {$i++}
+              <span {if $i==1} class="hover" {/if}>{$n}</span>  
+               {/loop}  
+             {/pc}         
+                        </div>
+                      </div><!--flashbox end-->
+                      
+                      <div class="news_list">
+                        <div class="more" style="margin-top:-67px;"><a href="{$CATEGORYS[19]['url']}">更多+</a></div>
+                        <ul>                  
+             {pc:content  action="position" posid="19" catid="19" order="listorder DESC" num="7"}
+        	 {loop $data $r}
+               <li><span class="date_div">[{date('Y-m-d',$r[inputtime])}]</span><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],60,'')}</a></li>
+               {/loop}  
+             {/pc}   
+                       </ul>
+                      </div>
+                        
+                    </div>
+                    <div class="con2">
+                    
+                       <div class="flashbox1">
+                        <div class="focusNew_out1 flashlist1">
+               {php $i=0;}          
+             {pc:content  action="position" posid="18" catid="20"  thumb="1" order="listorder DESC" num="4"}
+        	 {loop $data $r}
+             {$i++}
+               <div {if $i==1} style="display:block;" {/if} class="f_out">
+                                <span class="f_out_txt"><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],36,'')}</a></span>
+                                <a href="{$r[url]}"><img width="382" height="233" alt="{$r[title]}" src="{thumb($r[thumb],382,233)}" /></a>
+               </div>
+               {/loop}  
+             {/pc}   
+                        </div>
+                        <div class="ceng_div1"><img src="{IMG_PATH}index_82.png"></div>
+                        <div class="f_tabs1">
+              {php $i=0;}          
+              {pc:content  action="position" posid="18" catid="20"  thumb="1" order="listorder DESC" num="4"}
+        	 {loop $data $r}
+             {$i++}
+              <span {if $i==1} class="hover" {/if}>{$n}</span>  
+               {/loop}  
+             {/pc}    
+                        </div>
+                      </div><!--flashbox end-->
+                      
+                      <div class="news_list">
+                      <div class="more" style="margin-top:-67px;"><a href="{$CATEGORYS[20]['url']}">更多+</a></div>
+                        <ul>
+                         {pc:content  action="position" posid="19" catid="20" order="listorder DESC" num="7"}
+        	             {loop $data $r}
+                         <li><span class="date_div">[{date('Y-m-d',$r[inputtime])}]</span><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],60,'')}</a></li>
+                         {/loop}  
+                         {/pc}   
+                        </ul>
+                      </div>
+                        
+                    </div>
+                    <div class="con3">
+                    
+                       <div class="flashbox2">
+                        <div class="focusNew_out2 flashlist2">
+             {php $i=0;}          
+             {pc:content  action="position" posid="18" catid="21"  thumb="1" order="listorder DESC" num="4"}
+        	 {loop $data $r}
+             {$i++}
+               <div {if $i==1} style="display:block;" {/if} class="f_out">
+                                <span class="f_out_txt"><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],36,'')}</a></span>
+                                <a href="{$r[url]}"><img width="382" height="233" alt="{$r[title]}" src="{thumb($r[thumb],382,233)}" /></a>
+               </div>
+               {/loop}  
+             {/pc}  
+                        </div>
+                        <div class="ceng_div2"><img src="{IMG_PATH}index_82.png"></div>
+                        <div class="f_tabs2">
+              {php $i=0;}          
+              {pc:content  action="position" posid="18" catid="21"  thumb="1" order="listorder DESC" num="4"}
+        	 {loop $data $r}
+             {$i++}
+              <span {if $i==1} class="hover" {/if}>{$n}</span>  
+               {/loop}  
+             {/pc}  
+                        </div>
+                      </div><!--flashbox end-->
+                      
+                      <div class="news_list">
+                      <div class="more" style="margin-top:-67px;"><a href="{$CATEGORYS[21]['url']}">更多+</a></div>
+                        <ul>
+                         {pc:content  action="position" posid="19" catid="21" order="listorder DESC" num="7"}
+        	             {loop $data $r}
+                         <li><span class="date_div">[{date('Y-m-d',$r[inputtime])}]</span><a href="{$r[url]}" title="{$r[title]}">{str_cut($r[title],60,'')}</a></li>
+                         {/loop}  
+                         {/pc}  
+                        </ul>
+                      </div>
+                        
+                    </div>
+              </div>
+          </div>
+          <!--选项卡结束-->
+       
+     </div>
+
+     <!--新闻结束-->
+
+     <div class="gonggao_div">
+       <div class="gonggao_title"><span class="more"><a href="{$CATEGORYS[22]['url']}">更多+</a></span>{$CATEGORYS[22]['catname']}&nbsp;&nbsp;<span>Announcement</span></div>
+       <div class="news_list">
+        <ul>
+        {pc:content  action="lists" catid="22" order="listorder DESC" num="7"}
+        {loop $data $key $val}
+         <li> <a href="{$val['url']}">{$val['title']}</a></li>
+        {/loop}
+        {/pc}
+        </ul>
+      </div>
+    </div>
+    <!--公告结束-->
+     
+    <div class="left_div"> 
+    
+    <div class="cpzx_div">
+        <div class="cpzx_title"><span class="more"><a href="{$CATEGORYS[9]['url']}">更多+</a></span>{$CATEGORYS[9]['catname']}&nbsp;&nbsp;<span>Listed Products</span></div>
+        <div class="product_div">
+            <div class="tab2">
+
+                <ul class="menu2">
+                   <li class="active2"><span class="number">1</span><span class="name_l"><a href="{$CATEGORYS[23]['url']}" style="display:block;">银</a></span></li>
+                   <li><span class="number">2</span><span class="name_l"><a href="{$CATEGORYS[24]['url']}" style="display:block;">钼</a></span></li>
+                   <li><span class="number">3</span><span class="name_l"><a href="{$CATEGORYS[25]['url']}" style="display:block;">铜</a></span></li>
+                   <li><span class="number">4</span><span class="name_l"><a href="{$CATEGORYS[26]['url']}" style="display:block;">镍</a></span></li>
+                   <li><span class="number">5</span><span class="name_l"><a href="{$CATEGORYS[27]['url']}" style="display:block;">钒</a></span></li>
+                   <li><span class="number">6</span><span class="name_l"><a href="{$CATEGORYS[28]['url']}" style="display:block;">钛</a></span></li>
+                </ul>
+                <div class="con1">
+                <div class="shuju"><img src="{IMG_PATH}shuju_03.jpg"></div>
+                </div>
+                <div class="con2">
+                <div class="shuju"><img src="{IMG_PATH}shuju_03.jpg"></div>
+                </div>
+                <div class="con3">
+                <div class="shuju"><img src="{IMG_PATH}shuju_03.jpg"></div>
+                </div>
+                <div class="con4">
+                <div class="shuju"><img src="{IMG_PATH}shuju_03.jpg"></div>
+                </div>
+                <div class="con5">
+                <div class="shuju"><img src="{IMG_PATH}shuju_03.jpg"></div>
+                </div>
+                <div class="con6">
+                <div class="shuju"><img src="{IMG_PATH}shuju_03.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="serviece_content">
+    <div class="serviece_div">
+       <div class="serviece_title"><span class="more"><a href="{$CATEGORYS[11]['url']}">更多+</a></span>{$CATEGORYS[11]['catname']}&nbsp;&nbsp;<span>Serviece</span></div>
+       <div class="serviece_con">
+          <div class="tup_div_one">
+               <p><a href="{$CATEGORYS[65]['url']}"><img src="{$CATEGORYS[65]['image']}"/></a></p>
+               <div class="tup_top_new">
+                 <h1><a href="{$CATEGORYS[65]['url']}">{$CATEGORYS[65]['catname']}</a></h1>
+                 <h2><a href="{$CATEGORYS[65]['url']}">{$CATEGORYS[65]['description']}</a></h2>
+               </div>
+               <div class="clear"></div>
+            </div>
+            <div class="tup_div_one">
+               <p><a href="{$CATEGORYS[64]['url']}"><img src="{$CATEGORYS[64]['image']}"/></a></p>
+               <div class="tup_top_new">
+                 <h1><a href="{$CATEGORYS[64]['url']}">{$CATEGORYS[64]['catname']}</a></h1>
+                 <h2><a href="{$CATEGORYS[64]['url']}">{$CATEGORYS[64]['description']}</a></h2>
+               </div>
+               <div class="clear"></div>
+            </div>
+       </div>
+    </div>
+    <div class="serviece_div serviece_line">
+       <div class="serviece_title"><span class="more"><a href="{$CATEGORYS[12]['url']}">更多+</a></span>{$CATEGORYS[12]['catname']}&nbsp;&nbsp;<span>Serviece</span></div>
+       <div class="serviece_con">
+          <div class="tup_div_one">
+               <p><a href="{$CATEGORYS[72]['url']}"><img src="{$CATEGORYS[72]['image']}"/></a></p>
+               <div class="tup_top_new">
+                 <h1><a href="{$CATEGORYS[72]['url']}">{$CATEGORYS[72]['catname']}</a></h1>
+                 <h2><a href="{$CATEGORYS[72]['url']}">{$CATEGORYS[72]['description']}</a></h2>
+               </div>
+               <div class="clear"></div>
+            </div>
+            <div class="tup_div_one">
+               <p><a href="{$CATEGORYS[83]['url']}"><img src="{$CATEGORYS[83]['image']}"/></a></p>
+               <div class="tup_top_new">
+                 <h1><a href="{$CATEGORYS[83]['url']}">{$CATEGORYS[83]['catname']}</a></h1>
+                 <h2><a href="{$CATEGORYS[83]['url']}">{$CATEGORYS[83]['description']}</a></h2>
+               </div>
+               <div class="clear"></div>
+            </div>
+       </div>
+    </div>
+    <div class="clear"></div>
+    
+    </div> 
+    <div class="clear"></div>
+    
+    </div> 
+    
+    
+     
+    <div class="dthq_div">
+       <div class="dthq_title"><span class="more"><a href="#">更多+</a></span>动态行情&nbsp;&nbsp;<span>Dynamic Quotes</span></div>
+       <div class="dthq_list">
+         <div class="dthq_list_title">
+           <span class="spmc">商品名称</span>
+           <span class="cjj">成交价</span>
+           <span class="zdj">最低价</span>
+           <span class="zgj">最高价</span>
+           <span class="dj">涨跌</span>
+         </div>
+         <div id="CSSBox">
+                <ul id="CSSContent">
+                    <li><span class="spmc_div">现货白银</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货黄金</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货铝铜</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货白银</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货黄金</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货铝铜</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货白银</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货黄金</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货铝铜</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货白银</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货黄金</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货铝铜</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                    <li><span class="spmc_div">现货白银</span><span class="cjj_div">362</span><span class="zdj_div">-23</span><span class="zgj_div">750</span><span class="dj_div">265</span></li>
+                </ul>
+         </div>
+         <div class="clear"></div>
+       </div>
+       <div class="btn_div">
+           <div class="btn_1"><a href="{$CATEGORYS[66]['url']}"><img src="{$CATEGORYS[66]['image']}"></a></div>
+           <div class="btn_2"><a href="{$CATEGORYS[67]['url']}"><img src="{$CATEGORYS[67]['image']}"></a></div>
+           <div class="clear"></div>
+           <div class="btn_3"><a href="{$CATEGORYS[75]['url']}"><img src="{$CATEGORYS[75]['image']}"></a></div>
+       </div>
+    </div>
+    <div class="clear"></div>
+    <!--动态行情结束-->
+
+
+     <div class="links_div">
+          <!--选项卡开始-->
+           <div class="links_con">
+                <div class="title">友情链接&nbsp;&nbsp;<span>Links</span></div>
+                <div class="tab5">
+                    <ul class="menu5">
+                        <li class="active5">交收库</li>
+                        <li>保险公司</li>
+                        <li>合作银行</li>
+                        <li>质检机构</li>
+                    </ul>
+                    <div class="con1">
+                        <div class="tup_div_one">
+                           <p>
+                           {pc:link action="type_list" siteid="$siteid" typeid="53" order="listorder DESC" return="dat"}
+                            {loop $dat $v}
+                            <a href="{$v[url]}" target="_blank">{$v[name]}</a>
+                            {/loop}
+                            {/pc}
+ 
+                           </p>
+                           <div class="logo_list">
+                              <ul>
+                              {php $i=0;}
+                              {pc:link  action="type_list" siteid="$siteid" linktype="1" typeid="53" order="listorder DESC" return="pic_link"}
+                               {loop $pic_link $v}
+                               {$i++}
+                               <li {if $i==1} class="frist_li" {/if}><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}" /></a></li>
+                               {/loop}
+                               {/pc}
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="con2"> 
+                        <div class="tup_div_one">
+                           <p>{pc:link action="type_list" siteid="$siteid" typeid="54" order="listorder DESC" return="dat"}
+                            {loop $dat $v}
+                            <a href="{$v[url]}" target="_blank">{$v[name]}</a>
+                            {/loop}
+                            {/pc}</p>
+                           <div class="logo_list">
+                              <ul>
+                                {php $i=0;}
+                              {pc:link  action="type_list" siteid="$siteid" linktype="1" typeid="54" order="listorder DESC" return="pic_link"}
+                               {loop $pic_link $v}
+                               {$i++}
+                               <li {if $i==1} class="frist_li" {/if}><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}" /></a></li>
+                               {/loop}
+                               {/pc}
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="con3">
+                        <div class="tup_div_one">
+                           <p>{pc:link action="type_list" siteid="$siteid" typeid="55" order="listorder DESC" return="dat"}
+                            {loop $dat $v}
+                            <a href="{$v[url]}" target="_blank">{$v[name]}</a>
+                            {/loop}
+                            {/pc}</p>
+                           <div class="logo_list">
+                              <ul>
+                               {php $i=0;}
+                              {pc:link  action="type_list" siteid="$siteid" linktype="1" typeid="55" order="listorder DESC" return="pic_link"}
+                               {loop $pic_link $v}
+                               {$i++}
+                               <li {if $i==1} class="frist_li" {/if}><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}" /></a></li>
+                               {/loop}
+                               {/pc}
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="con4">
+                        <div class="tup_div_one">
+                           <p>{pc:link action="type_list" siteid="$siteid" typeid="56" order="listorder DESC" return="dat"}
+                            {loop $dat $v}
+                            <a href="{$v[url]}" target="_blank">{$v[name]}</a>
+                            {/loop}
+                            {/pc}</p>
+                           <div class="logo_list">
+                              <ul>
+                                {php $i=0;}
+                              {pc:link  action="type_list" siteid="$siteid" linktype="1" typeid="56" order="listorder DESC" return="pic_link"}
+                               {loop $pic_link $v}
+                               {$i++}
+                               <li {if $i==1} class="frist_li" {/if}><a href="{$v['url']}" title="{$v['name']}" target="_blank"><img src="{$v[logo]}" /></a></li>
+                               {/loop}
+                               {/pc}
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+                
+              </div>
+          </div>
+          <!--选项卡结束-->
+       
+     </div>
+     <!--内容第六部分结束-->
+
+</div>
+<!--内容结束-->
+
+{template "content","footer"}
+<script src="{JS_PATH}jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}bigpicroll.js"></script>
+<script type="text/javascript">
+FeatureList(".flashbox",{
+	"onclass":"hover",
+	"offclass":"",
+	"pause_on_act":"click",
+	"interval":5000,
+	"speed":5
+});
+</script>
+<script type="text/javascript" src="{JS_PATH}bigpicroll_1.js"></script>
+<script type="text/javascript">
+FeatureList1(".flashbox1",{
+	"onclass":"hover1",
+	"offclass":"",
+	"pause_on_act":"click",
+	"interval":5000,
+	"speed":5
+});
+</script>
+
+<script type="text/javascript" src="{JS_PATH}bigpicroll_2.js"></script>
+<script type="text/javascript">
+FeatureList2(".flashbox2",{
+	"onclass":"hover2",
+	"offclass":"",
+	"pause_on_act":"click",
+	"interval":5000,
+	"speed":5
+});
+</script>
+
+<script type="text/javascript">
+new Marquee(
+{
+	MSClass	  : ["CSSBox","CSSContent"],
+	Direction : -2,
+	Step	  : 0.3,
+	Width	  : 295,
+	Height	  : 320,
+	Timer	  : 20,
+	DelayTime : 3000,
+	WaitTime  : 0,
+	ScrollStep: 46,
+	SwitchType: 0,
+	AutoStart : true
+});
+</script>
+
+</body>
+</html>

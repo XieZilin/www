@@ -1,0 +1,76 @@
+
+{template "content","header"}
+<link href="{CSS_PATH}ys_about.css" rel="stylesheet" type="text/css" />
+
+
+<div class="banner_div"></div>
+
+<div class="content">
+
+<div class="left_main">
+
+       <div class="gonggao_div">
+       <div class="gonggao_title">交易所公告</div>
+       <div class="news_list">
+        <ul>
+{pc:content  action="lists" catid="22" order="listorder DESC" num="6"}
+ {loop $data $key $val}
+ <li> <a href="{$val['url']}">{$val['title']}</a></li>
+ {/loop}
+ {/pc}
+        </ul>
+      </div>
+    </div>
+    <!--公告结束-->
+</div>
+
+<div class="right_main">
+
+   <div class="right_main_title"><span class="position_div"><a href="{siteurl($siteid)}">首页</a>>搜索结果</span>找到约 {$totalnums} 条结果</div>
+   <div class="right_main_con">
+
+      <div class="tabchange_div">
+          <!--选项卡开始-->
+           <div class="tabchange_con">
+           
+   
+                    <div class="conent_about">
+                    
+                    <div class="list_news">
+                    <ul>
+{loop $data_ss $i $r}
+ {php $inputtime=format::date($r[inputtime], 1);}
+ {php $shijian=date('Y-m-d',time($inputtime))}
+	<li><a href="{$r[url]}" target="_blank">{$r[title]}</a><span class="rt">{$shijian}</span></li>
+
+{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+</div>
+                    </div>
+
+          </div>
+          <!--选项卡结束-->
+       
+     </div>
+      
+      
+   
+   </div>
+
+
+</div>    
+<div class="clear"></div>
+
+</div>
+<!--内容结束-->
+<script type="text/javascript" src="{JS_PATH}search_history.js"></script>
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+{template "content","footer"}
+
+</body>
+</html>
+

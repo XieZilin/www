@@ -1,0 +1,22 @@
+
+1.        本模块已经有了留言板标签功能！请自行查找！
+2.        在phpcms\modules\建立txbguestbook文件件，在此文件夹内建立install文件夹安装此模块用，里面必须包括language文件夹，template文件夹（安装过程中复制到template文件夹里），config.inc.php（安装时候的配置信息），extention.inc.php（向后台添加菜单），model.php（我的理解应该是返回模型名称），module.sql（向module表添加此模块信息），txbguestbook_data.sql、txbguestbook_setting.sql（创建模型数据表），
+3.        其次在phpcms\model文件夹里建立模型文件txbguestbook_data_model.class.php、txbguestbook_setting_model.class.php（设置模型以备用）
+4.        使用安装方法：
+1.        覆盖安装目录
+    
+2.        2.登陆后台，模块管理（第二页）有一个会出现一个未安装的新模块【留言】点击安装
+   
+
+3.        安装成功后会更新缓存、在模块里会有留言模块设置、在内容里会有留言内容审核
+请根据具体情况进行设置！
+
+
+
+4.        调用地址：/index.php?m=guestbook&c=index&a=register    
+
+
+
+5.        模板调用标签形式
+
+6.        {pc:txbguestbook  action="txbguestbooklists"  parentid="-1"  siteid="1" order="creat_at desc" num="5" page="$_GET

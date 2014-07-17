@@ -1,0 +1,37 @@
+<?php
+return array (
+  1 => 
+  array (
+    'id' => '1',
+    'catid' => '66',
+    'typeid' => '0',
+    'title' => '测试软件',
+    'style' => '',
+    'thumb' => '',
+    'keywords' => '软件',
+    'description' => '测试软件',
+    'posids' => '0',
+    'url' => 'http://localhost/html/2014/pc_0513/1.html',
+    'listorder' => '0',
+    'status' => '99',
+    'sysadd' => '1',
+    'islink' => '0',
+    'username' => 'admin',
+    'inputtime' => '1399950719',
+    'updatetime' => '1399950878',
+    'systems' => 'Win2000/WinXP/Win2003',
+    'copytype' => '免费版',
+    'language' => '英文',
+    'classtype' => '',
+    'version' => '',
+    'filesize' => '未知',
+    'stars' => '',
+    'hitsid' => 'c-2-1',
+    'views' => '2',
+    'yesterdayviews' => '0',
+    'dayviews' => '2',
+    'weekviews' => '2',
+    'monthviews' => '2',
+  ),
+);
+?>

@@ -1,0 +1,29 @@
+{template "content","header"}
+
+<div class="content">
+  {template "content","left"}
+
+
+     <div class="right_main">
+       {template "content","right_title"}
+       <h1>{$title}<br />
+	   <span>发布时间：{date('Y-m-d',time($inputtime))}</span></h1>
+
+       <div class="main_div">
+           {$content}
+       </div>
+       <p class="main_div">
+         <strong>上一篇：</strong><a href="{$previous_page[url]}">{$previous_page[title]}</a><br />
+         <strong>下一篇：</strong><a href="{$next_page[url]}">{$next_page[title]}</a>
+       </p>  
+   </div>
+
+    
+
+
+
+
+   <div class="clear"></div>
+</div>
+
+{template "content","footer"}

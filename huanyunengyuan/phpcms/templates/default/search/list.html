@@ -1,0 +1,79 @@
+{template "content","header"}
+
+<div class="content">
+  <div class="left_main">
+      <div class="left_main_title">
+        <!--
+        <span>ABOUT US</span><br/>关于我们</div>
+        -->
+        
+        <span>SEARCH</span><br/>搜索</div>
+      <div class="left_nav">
+         
+           
+          <div class="dzqk_div">
+               <div class="com_title">电子期刊&nbsp;&nbsp;&nbsp;<span>Electronic Journal</span></div>
+               <div class="dzqk_con">
+                  <a href="javascript:void(0)"></a>
+               </div>
+          </div>
+      </div>
+      
+      <div><img src="{IMG_PATH}hy_a_18.jpg"/></div>
+   </div>
+
+    <!--右侧正文列表-->
+     <div class="right_main">
+       <div class="right_main_title">
+
+        <span><a href="{siteurl($siteid)}">首页</a>> 搜索结果 </span> 搜索结果</div>
+         
+      <div class="jg"></br>获得约 {$totalnums} 条结果 （用时{sprintf("%01.2f", $execute_time)} 秒）</div>
+
+       <div class="main_div">
+        <ul class = "main_div_a">
+          {loop $data_ss $i $r} <!--
+            <li class="wrap">
+              <div>
+                {if $r['thumb']}<a href="{$r[url]}"><img src="{$r[thumb]}" width="60" height="60" /></a>{/if}
+                <h5><a href="{$r[url]}">{$r[title]}</a>{if $r['posids']}<img src="{IMG_PATH}icon/small_elite.gif">{/if}</h5>
+                <p>{$r[description]}</p>
+              </div>
+              <div class="adds">发布时间：{format::date($r[inputtime], 1)}</div>
+            </li> -->
+            <li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>●&nbsp&nbsp<a href="{$r[url]}"  target="_blank">{$r[title]}</a></li>
+            <p>{$r[description]}</p>
+         {/loop}
+            {if empty($data_ss)}未找到结果{/if}
+        </ul>  
+        <div id="pages" class="text-c">{$pages}</div>
+          <!--
+           {pc:content action="lists" catid="$catid" num="12" order="id DESC" page="$page"}
+        	<ul class="list lh24 f14">
+				{loop $data $r}
+					<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>●&nbsp&nbsp<a href="{$r[url]}"  target="_blank" {title_style($r[style])}>{$r[title]}</a></li>
+					
+				{/loop}
+        	</ul>
+          <div id="pages" class="text-c">{$pages}</div>
+        	
+		   {/pc}
+      -->
+
+       </div>
+   </div>
+
+
+    
+
+
+
+
+   <div class="clear"></div>
+</div>
+<script type="text/javascript" src="{JS_PATH}search_history.js"></script>
+{if $setting['suggestenable']}
+<script type="text/javascript" src="{JS_PATH}jquery.suggest.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_suggest.js"></script>
+{/if}
+{template "content","footer"}

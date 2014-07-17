@@ -1,0 +1,25 @@
+{template "content","header"}
+
+<div class="content">
+  {template "content","left"}
+
+
+   <div class="right_main">
+       <div class="right_main_title">
+
+        <span><a href="{siteurl($siteid)}">首页</a>><a href="#"{catpos($catid)} </a><a href="#">{$title}</a></span>{$title}</div>
+   
+
+
+       <div class="main_div">
+           {$content}
+       </div>
+   </div>
+
+
+
+
+   <div class="clear"></div>
+</div>
+
+{template "content","footer"}

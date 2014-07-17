@@ -1,0 +1,64 @@
+{template "content","header"}
+<link href="{CSS_PATH}ys_about.css" rel="stylesheet" type="text/css" />
+
+<div class="banner_div"></div>
+
+<div class="content">
+
+{template "content","left"}
+<div class="right_main">
+
+   <div class="right_main_title"><span class="position_div"><a href="{siteurl($siteid)}">首页</a>>{catpos($catid)}</span>{php $k = intval(diy_top_id($catid))}
+       {$CATEGORYS[$k]['catname']}</div>
+   <div class="right_main_con">
+      <div class="icon_div"><img src="{IMG_PATH}shuju_03.jpg" /></div>
+      
+      <div class="tabchange_div">
+          <!--选项卡开始-->
+           <div class="tabchange_con">
+           
+                <div class="tab6">
+                    <ul class="menu6">
+            {php $i=0;}        
+          {pc:get sql="select * from allwww_category where parentid=$catid order by listorder ASC" return="child"} 
+         {loop $child $c}
+         {$i++}
+           <li {if $i==1} class="active6" {/if}>{$c[catname]}</li>
+         {/loop}
+         {/pc} 
+                    </ul>
+        {php $i=0;}        
+          {pc:get sql="select * from allwww_category where parentid=$catid order by listorder ASC" return="zlm"} 
+        {loop $zlm $cat}
+         {$i++}
+         {php $k=$cat['catid']}
+    {pc:get sql="SELECT * FROM allwww_page where catid=$k " } 
+    {loop $data $r}
+      <div class="con{$i}">
+      {$r[content]}
+      </div>
+    {/loop} 
+    {/pc}     
+         {/loop}
+         {/pc} 
+              </div>
+          </div>
+          <!--选项卡结束-->
+       
+     </div>
+      
+      
+   
+   </div>
+
+
+</div>    
+<div class="clear"></div>
+
+</div>
+<!--内容结束-->
+
+{template "content","footer"}
+
+</body>
+</html>

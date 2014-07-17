@@ -1,0 +1,67 @@
+
+{template "content","header"}
+<link href="{CSS_PATH}ys_about.css" rel="stylesheet" type="text/css" />
+
+
+<div class="banner_div"></div>
+
+<div class="content">
+
+{template "content","left"}
+
+<div class="right_main">
+
+   <div class="right_main_title"><span class="position_div"><a href="{siteurl($siteid)}">首页</a>>{catpos($catid)}</span>{php $k = intval(diy_top_id($catid))}
+       {$CATEGORYS[$k]['catname']}</div>
+   <div class="right_main_con">
+
+      <div class="tabchange_div">
+          <!--选项卡开始-->
+           <div class="tabchange_con">
+           
+   
+                    <div class="conent_about">
+<div id="Article">
+        	<h1>{$title}<br />
+<span>发布时间：{date('Y-m-d',time($inputtime))}</span></h1>
+			
+			<div class="content">
+		
+				{$content}
+	
+			</div>
+
+			<div id="pages" class="text-c">{$pages}</div>
+            
+            <p class="f14">
+                <strong>上一篇：</strong><a href="{$previous_page[url]}">{$previous_page[title]}</a><br />
+                <strong>下一篇：</strong><a href="{$next_page[url]}">{$next_page[title]}</a>
+            </p>
+         
+          <div class="bk15"></div>
+          
+      </div>
+
+
+                    </div>
+
+          </div>
+          <!--选项卡结束-->
+       
+     </div>
+      
+      
+   
+   </div>
+
+
+</div>    
+<div class="clear"></div>
+
+</div>
+<!--内容结束-->
+
+{template "content","footer"}
+
+</body>
+</html>

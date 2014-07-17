@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>海南环宇新能源</title>
+<!--<link rel="stylesheet" type="text/css" href="css/style.css"/>-->
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}common.css"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}about.css"/>
+<script type="text/javascript" src="{JS_PATH}jquery.js"></script>
+<script type="text/javascript" src="{JS_PATH}MSClass.js"></script>
+<script type="text/javascript" src="{JS_PATH}common.js"></script>
+<script type="text/javascript" src="{JS_PATH}jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}jquery.SuperSlide.2.1.1.source.js"></script>
+<script type="text/javascript">
+$(function () {
+     $(".share_2").hover(function(){
+            $(".ewm").stop(true,true).show(100);
+            },function(){
+            $(".ewm").stop(true,true).hide(100);
+       });
+});
+</script>
+</head>
+
+<body>
+<div class="head_box">
+    <div class="top_con">
+      <div class="top_header">
+       <div class="logo"><a href="#"><img src="{IMG_PATH}index_07.png"/></a></div>
+       <div class="menu">
+          <ul class="nav">
+           <!--
+           <li><a href="#" class="bi">首页<span>HOME</span></a></li>
+           <li><a href="#" class="bi">关于我们<span>ABOUT</span></a></li>
+           <li><a href="#" class="bi">新闻中心<span>NEWS</span></a></li>
+           <li><a href="#" class="bi">产品中心<span>PRODUCTS</span></a></li>
+           <li><a href="#" class="bi">企业文化<span>CULTURE</span></a></li>
+           <li><a href="#" class="bi">投资者关系<span>INVESTOR</span></a></li>
+           <li><a href="#" class="bi">社会责任<span>lIABILITY</span></a></li>
+           <li><a href="#" class="bi">人力资源<span>CAREERS</span></a></li>
+           <li><a href="#" class="bi last_li">联系我们<span>CONTACT</span></a></li>
+            -->
+           {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+              <li><a href="{siteurl($siteid)}" class="bi">首页<span>HOME</span></a></li>
+              {loop $data $r}
+                <li><a href="{diy_top_link($r[catid])}" class="bi">{$r[catname]}<span>
+                  <?php
+                    $array=array("关于我们"=>"ABOUT US",
+                   "新闻中心"=>"NEWS",
+                   "产品中心"=>"PRODUCTS",
+                   "企业文化"=>"CULTURE",
+                    "投资者关系"=>"INVESTOR",
+                   "社会责任"=>"LIABILITY",
+                    "人力资源"=>"CAREER",
+                    "联系我们"=>"CONTACT"
+                    );
+                     echo $array[$r[catname]]
+                 ?>
+                </span></a></li>
+
+              {/loop}
+           {/pc}
+         </ul>
+       </div>
+       <div class="clear"></div>
+      </div> 
+    </div>
+
+    <div class="banner"></div>
+</div>

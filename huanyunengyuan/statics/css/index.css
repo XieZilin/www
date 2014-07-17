@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.top_news{width:100%; min-width:1140px; height:55px; border-bottom:1px solid #dedede;}
+.top_news_con{width:1140px;  margin:0px auto; padding-top:12px;}
+ /*文字滚动*/
+.left_gg{width:760px; height:30px; overflow:hidden; background: url(../images/index_17.png) no-repeat left center; float:left;}
+.left_gg #TextDiv1{width:760px; height:30px; line-height:30px; padding:0px 20px;}
+.left_gg #TextDiv1 a{ color:#333; font-family:"Microsoft Yahei"; font-size:12px; }
+.left_gg #TextDiv1 a:hover{ color:#ff6600;}
+.left_gg #TextDiv1 ul{ height:30px; line-height:30px;overflow:hidden;}
+.left_gg #TextDiv1 ul li{ width:200px;height:30px; line-height:30px; float:left; background: url(../images/index_20.png) no-repeat left 13px; padding-left:10px; margin:0px 15px; overflow:hidden; }
+
+
+
+.right_serch{ float:right; width:200px; padding-top:3px;}
+.serch_l{ float:left; width:165px; height:26px; line-height:26px;} 
+.serch_l .search_text{width:145px; height:26px; line-height:26px;  background: url(../images/index_13.png) no-repeat; border:0px; color:#a8afb5; font-family:"Microsoft Yahei"; font-size:12px; padding-left:20px;} 
+.serch_r{ float:left; width:35px; height:26px; line-height:26px;} 
+.serch_r .search_button{width:35px; height:26px; line-height:26px;  background: url(../images/index_14.png) no-repeat; border:0px; *margin-top:1px;}
+
+.content{width:1140px;  margin:0px auto; overflow:hidden; padding-top:30px;}
+.content .com_title{height:26px; line-height:26px; color:#333; font-family:"Microsoft Yahei"; font-size:14px; padding-bottom:15px;}
+.content .com_title span{height:26px; line-height:26px; color:#333; font-family:"Arial"; font-size:12px; }
+
+.news_div{width:435px; float:left;}
+.news_div .tup_div_one{ width:435px;}
+.news_div .tup_div_one p{width:102px; height:75px; float:left; margin-right:12px;}
+.news_div .tup_div_one p img{width:96px; height:69px; padding:2px; border:1px solid #dedede;}
+.news_div .tup_top_new{ float:left; width:320px;}
+.news_div .tup_div_one h1{margin:0px 0px 10px 0px;}
+.news_div .tup_div_one h1 a{color:#ff6600;font-size:12px;font-family:"Microsoft Yahei"; font-weight:normal;}
+.news_div .tup_div_one h1 .date_div{float:right; color:#ff6600;font-size:12px;font-family:"Microsoft Yahei";font-weight:normal;}
+.news_div .tup_div_one h2{ color:#333;font-size:12px;font-family:"Microsoft Yahei"; font-weight:normal; text-indent:2em; line-height:22px; margin:0px;}
+.news_div .tup_div_one h2 a{color:#333;font-size:12px;font-family:"Microsoft Yahei"; font-weight:normal; }
+.news_div .tup_div_one h2 a:hover{ color:#ff6600;}
+.news_div .news_list{width:435px; padding-top:10px;}
+.news_div .news_list p{background:url(../images/index_50.png) no-repeat left 10px; padding-left:15px; height:24px; line-height:24px; width:420px; }
+.news_div .news_list p a{color:#333;font-size:12px;font-family:"Microsoft Yahei";}
+.news_div .news_list p a:hover{ color:#ff6600;}
+.date_div{float:right; color:#333;font-size:12px;font-family:"Microsoft Yahei";font-weight:normal;}
+
+
+
+/*新闻轮换*/
+.banner_index{position: relative;overflow:hidden;width:435px; height:200px;}
+.banner_index .btn,.banner_pro .bBtn{position: absolute;top:9px;width:6px;height:9px;display: block;z-index: 3;}
+.banner_index .btnPre,.banner_pro .bPre{background: url(../images/index_30.png) no-repeat 0 0;right:70px; }
+.banner_index .btnPre:hover,.banner_pro .bPre:hover{background: url(../images/index_26.png) no-repeat 0 0;}
+.banner_index .btnNext,.banner_pro .bNext{background: url(../images/index_29.png) no-repeat 0 0;right:0px;}
+.banner_index .btnNext:hover,.banner_pro .bNext:hover{background: url(../images/index_31.png) no-repeat 0 0;}
+.banner_index .banner_wrap{position: absolute;left:0px;top:0px; z-index: 2;}
+.banner_index .banner_wrap li{width: 435px;float: left; margin-top:40px;}
+.indexBanner_num{width:60px; margin-top:2px;  position:absolute; top:8px; right:3px; z-index:3; } 
+.indexBanner_num a{width: 7px;height: 7px;display: inline-block;_zoom:1;background: url(../images/index_34.png) no-repeat 0 0;font-size: 0px;line-height: 0px;margin:0 5px;}
+.indexBanner_num a.on,.indexBanner_num a:hover{background: url(../images/index_32.png) no-repeat 0 0;}
+
+
+
+
+.dzqk_div{width:195px; float:left; margin-left:50px;}
+.dzqk_con{ margin:15px 0px;}
+.dzqk_con a{width:195px; height:133px; background: url(../images/index_40.png) no-repeat; display:block;}
+.dzqk_con a:hover{background: url(../images/index_42.png) no-repeat;}
+
+/*产品轮换*/
+.product_div{width:400px; float:left; margin-left:50px;}
+.product_list{width:400px;}
+.product_list .tup_div_one{ width:400px;}
+.product_list .tup_div_one p{width:127px; height:86px; float:left; margin-right:12px;}
+.product_list .tup_div_one p img{width:121px; height:80px; padding:2px; border:1px solid #dedede;}
+.product_list .tup_top_new{ float:left; width:220px;}
+.product_list .tup_div_one h1{margin:0px 0px 8px 0px;}
+.product_list .tup_div_one h1 a{color:#333;font-size:14px;font-family:"Microsoft Yahei"; font-weight:normal;}
+.product_list .tup_div_one h1 a:hover{ color:#ff6600;}
+.product_list .tup_div_one h2{ color:#333;font-size:12px;font-family:"Microsoft Yahei"; font-weight:normal; text-indent:2em; line-height:20px; margin:0px;}
+.product_list .tup_div_one h2 a{color:#333;font-size:12px;font-family:"Microsoft Yahei"; font-weight:normal; }
+.product_list .tup_div_one h2 a:hover{ color:#ff6600;}
+
+.banner_index1{position: relative;overflow:hidden;width:400px; height:105px;}
+.banner_index1 .btn1,.banner_pro1 .bBtn1{position: absolute;top:0px;width:18px;height:33px;display: block;z-index: 3;}
+.banner_index1 .btnPre1,.banner_pro1 .bPre1{background: url(../images/index_45.png) no-repeat 0 0;right:0px; top:50px;}
+.banner_index1 .btnPre1:hover,.banner_pro1 .bPre1:hover{background: url(../images/index_46.png) no-repeat 0 0;}
+.banner_index1 .btnNext1,.banner_pro1 .bNext1{background: url(../images/index_44.png) no-repeat 0 0;right:0px;}
+.banner_index1 .btnNext1:hover,.banner_pro1 .bNext1:hover{background: url(../images/index_47.png) no-repeat 0 0;}
+.banner_index1 .banner_wrap1{position: absolute;left:0px;top:0px; z-index: 2; width: 400px;}
+.banner_index1 .banner_wrap1 li{width: 400px;float: left; margin-top:0px;}
+
+.pro_more{ height:30px; line-height:30px; background: url(../images/index_54.png) no-repeat left center; padding-left:25px;}
+.pro_more a{color:#333;font-size:12px;font-family:"Microsoft Yahei"; }
+.pro_more a:hover{ color:#ff6600;}

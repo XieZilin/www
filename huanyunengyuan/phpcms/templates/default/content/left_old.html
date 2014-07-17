@@ -1,0 +1,50 @@
+   <div class="left_main">
+      <div class="left_main_title">
+        <!--
+        <span>ABOUT US</span><br/>关于我们</div>
+        -->
+        
+        <span>
+          <?php
+            $array=array("关于我们"=>"ABOUT US",
+              "新闻中心"=>"NEWS",
+              "产品中心"=>"PRODUCTS",
+              "企业文化"=>"CULTURE",
+              "投资者关系"=>"INVESTOR",
+              "社会责任"=>"LIABILITY",
+              "人力资源"=>"CAREER",
+              "联系我们"=>"CONTACT"
+            );
+            echo $array[$CATEGORYS[$catid][catname]]
+          ?>
+        </span><br/>
+          
+
+          {$CATEGORYS[$catid][catname]}</div>
+      <div class="left_nav">
+          <ul>
+            <!--
+              <li><a href="javascript:void(0)">公司简介</a></li>
+              <li><a href="javascript:void(0)">组织架构</a></li>
+              <li><a href="javascript:void(0)">资质荣誉</a></li>
+              <li><a href="javascript:void(0)">领导致辞</a></li>
+              <li><a href="javascript:void(0)">发展战略</a></li>
+            -->
+              {pc:content action="lists" catid="$catid" num="6" order="id ASC" page="$page"}
+              {loop $data $r}
+                   <li><a href="{$r[url]}" {title_style($r[style])}>{$r[title]}</a></li>
+ 
+              {/loop}
+              {/pc}
+           </ul>
+           
+          <div class="dzqk_div">
+               <div class="com_title">电子期刊&nbsp;&nbsp;&nbsp;<span>Electronic Journal</span></div>
+               <div class="dzqk_con">
+                  <a href="javascript:void(0)"></a>
+               </div>
+          </div>
+      </div>
+      
+      <div><img src="{IMG_PATH}hy_a_18.jpg"/></div>
+   </div>

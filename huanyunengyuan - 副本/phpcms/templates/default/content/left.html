@@ -1,0 +1,55 @@
+{php $parentCatId = intval(diy_top_id($catid))}
+
+<div class="left_main">
+      <div class="left_main_title">
+        <!--
+        <span>ABOUT US</span><br/>关于我们</div>
+        -->
+        
+        <span>{$CATEGORYS[$parentCatId][catdir]}</span><br/>{$CATEGORYS[$parentCatId][catname]}</div>
+      <div class="left_nav">
+          <!--左侧列表开始-->
+          <ul id="J_navlist">
+            <!--
+              <li><a href="javascript:void(0)">公司简介</a></li>
+              <li><a href="javascript:void(0)">组织架构</a></li>
+              <li><a href="javascript:void(0)">资质荣誉</a></li>
+              <li><a href="javascript:void(0)">领导致辞</a></li>
+              <li><a href="javascript:void(0)">发展战略</a></li>
+            -->
+           
+              {pc:content action="category" catid="$parentCatId" order="listorder ASC"  num="8"}
+              {loop $data $r}
+                  {php $child = $r[child]}
+                  <li>
+                  {if $child == 0}
+                   <a href="{$r[url]}"><h4>{$r[catname]}</h4></a>
+                  {else} 
+                    <h4>{$r[catname]}</h4>
+                    {php $chilid = intval($r[catid])}
+                    {pc:get sql="select * from allwww_category where parentid=$chilid order by listorder ASC" return="child"}
+                      <div class="list-item none" {if $CATEGORYS[$CAT[parentid]][catid]==$chilid }style="display: block;"{/if}>
+                      {loop $child $c}
+                        <p><a {if $catid==$c[catid]} class="xuanz" {/if} href="{$c[url]}" >{$c[catname]}</a></p>
+                      {/loop}
+                      </div>
+                    {/pc}
+                  {/if}
+                  </li>
+              {/loop}
+              {/pc}
+           </ul>
+           <script type="text/javascript" language="javascript">
+                navList(6);
+           </script>
+           <!--左侧列表结束-->
+          <div class="dzqk_div">
+               <div class="com_title">电子期刊&nbsp;&nbsp;&nbsp;<span>Electronic Journal</span></div>
+               <div class="dzqk_con">
+                  <a href="javascript:void(0)"></a>
+               </div>
+          </div>
+      </div>
+      
+      <div><img src="{IMG_PATH}hy_a_18.jpg"/></div>
+   </div>

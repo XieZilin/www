@@ -1,0 +1,49 @@
+{template "content","header"}
+
+<div class="content">
+  {template "content","left"}
+
+<div class="right_main">
+  {template "content","right_title"}
+   
+
+   <div class="main_div">
+
+      <div class="tabchange_div">
+          <!--选项卡开始-->
+           <div class="tabchange_con">
+           
+   
+                    <div class="conent_about">
+<div class="main_div_a">
+
+{pc:content action="lists" catid="$catid" order="listorder DESC" page="$page" num="10"}
+        
+{loop $data $r}
+  <li><a href="{$r[url]}" target="_blank"{title_style($r[style])}> ● &nbsp{$r[title]}</a><span class="rt">{date('Y-m-d',$r[inputtime])}</span></li>
+
+{/loop}
+       
+        <div id="pages" class="text-c">{$pages}</div>
+{/pc}
+
+</div>
+
+
+                    </div>
+
+          </div>
+          <!--选项卡结束-->
+       
+     </div>
+      
+      
+   
+   </div>
+
+
+</div>    
+<div class="clear"></div>
+</div>
+
+{template "content","footer"}

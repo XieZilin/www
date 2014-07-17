@@ -1,0 +1,33 @@
+http://www.zztuku.com/Html/PHPcms/20121218_5127.html
+
+kindeditor
+
+上传数据大小：
+
+http://bbs.phpcms.cn/thread-734405-1-1.html
+
+
+D:\wamp\php\php.ini
+
+D:\wamp\Apache2\bin\php.ini 
+post_max_size = 40M upload_max_filesize = 20M post大于upload
+
+D:\wamp\www\huanyunengyuan\statics\js\kindeditor\php\upload_json.php  $max_size = 20000000;
+
+播放器：vcastr22.swf 放在 D:\wamp\www\huanyunengyuan\
+
+修改D:\wamp\www\huanyunengyuan\phpcms\libs\functions\global.func.php
+
+ function video_Content($content) {
+            $start = strpos($content, "<embed");
+            $subStr = substr($content, $start);
+            $end = $start + strpos($subStr, "/>") + 2;
+            $pos2 = strpos($subStr, " src=");
+            $subStr2 = substr($subStr, $pos2+6);
+            $subStr3 = substr($subStr2, 0, strpos($subStr2, "\""));
+            $my_video = substr($content, 0, $start) . "<embed allowfullscreen=\"true\" height=\"388\" loop=\"false\" menu=\"true\" play=\"true\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" quality=\"high\" scale=\"showall\" showmovieinfo=\"0\" src=\"vcastr22.swf?vcastr_file=" 
+  . $subStr3 . "\" type=\"application/x-shockwave-flash\" width=\"500\" wmode=\"transparent\">" . substr($content, $end);
+  			return $my_video;
+ }
+
+引用：{video_Content($content)} 

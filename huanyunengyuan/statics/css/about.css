@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+.head_box {height: 380px;}
+.content{width:1140px;  margin:0px auto; overflow:hidden; padding-bottom:30px;}
+.banner{ width:100%; height:371px; background:url(../images/hy_a_01.jpg) no-repeat center; position:relative;}
+.left_main{ float:left; width:251px; overflow:hidden;}
+.left_main_title{width:191px; height:96px; background:url(../images/hy_a_04.jpg) no-repeat top center; color:#ffffff; font-family:"Microsoft Yahei"; font-size:20px; padding-left:60px; padding-top:60px;}
+.left_main_title span{ color:#ffffff; font-family:"Regular"; font-size:26px; }
+
+.left_nav{width:251px; background:url(../images/hy_a_17.jpg) repeat-y;}
+.left_nav ul li{width:251px; height:51px; line-height:51px; text-align:center; display:inline; font-family:'Microsoft YaHei'}
+.left_nav ul li h4{width:251px; height:51px; line-height:51px; text-align:center; background:url(../images/hy_a_15.jpg) no-repeat; display:block; font-size:14px;  color:#55575d; font-family:'Microsoft YaHei';
+font-weight:normal}
+.left_nav ul li h4:hover{ background:url(../images/hy_a_14.jpg) no-repeat; color:#fff; cursor:pointer;}
+.left_nav li .list-item { width:261px; position:relative; zoom:1; display:none; padding:10px 0;}
+.left_nav li .list-item p { width:261px; text-align:center; background:none;}
+.left_nav li .list-item a { background:none;  border:none; display:block; color:#999; height:42px; line-height: 42px; position: relative; text-decoration: none; font-size:14px; } 
+.left_nav li .list-item a:hover {color:#bf3c28;}
+.dzqk_div{width:195px; padding:100px 0px 100px 25px;}
+.dzqk_con a{width:195px; height:133px; background: url(../images/index_40.png) no-repeat; display:block;}
+.dzqk_con a:hover{background: url(../images/index_42.png) no-repeat;}
+.content .com_title{height:26px; line-height:26px; color:#333; font-family:"Microsoft Yahei"; font-size:14px; padding-bottom:15px; padding-left:10px;}
+.content .com_title span{height:26px; line-height:26px; color:#333; font-family:"Arial"; font-size:12px; }
+
+.right_main{ float:right; width:855px; margin-top:30px;}
+.right_main h1{ font-size:16px;font-family:"Microsoft YaHei"; color:#bf3c28; line-height:35px; text-align:center; font-weight:normal; margin-top: 30px}
+.right_main h1 span{ font-size:12px;font-family:"Microsoft YaHei"; color:#999; line-height:35px;}
+.right_main_title{width:835px; height:50px; line-height:50px; background:url(../images/hy_a_11.jpg) no-repeat bottom center; color:#333; font-family:"Microsoft Yahei"; font-size:20px; padding-left:20px;}
+.right_main_title span{ float:right; color:#666; font-family:"Microsoft Yahei"; font-size:12px; background:url(../images/hy_a_07.jpg) no-repeat left center; padding-left:10px;}
+.right_main_title span a{color:#666; font-family:"Microsoft Yahei"; font-size:12px; margin:0px 3px;}
+.right_main_title span a:hover{ color:#ff6600;}
+.main_div{color:#666; font-family:"Microsoft Yahei"; font-size:14px; line-height:35px; margin: 30px; }
+.main_div span{color:#ff6600;}
+.rt{float: right;}
+.jg{font-size: 20px;}

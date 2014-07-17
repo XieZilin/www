@@ -1,0 +1,53 @@
+<div class="left_main">
+       <div class="gonggao_title">
+       {php $k = intval(diy_top_id($catid))}
+       {$CATEGORYS[$k]['catname']}
+       </div>
+       <div class="aboutnav_zw">
+       
+          <div class="operate">
+            <ul id="J_navlist">
+             {pc:get sql="select * from allwww_category where parentid=$k order by listorder ASC" return="zlm"}
+{loop $zlm $r}
+               <li >
+               {php $child=$r[child]}
+                {if $child==0 || $k==9}
+                <a href="{$r[url]}"><h4>{$r[catname]}</h4></a>
+                {else}
+                 <h4>{$r[catname]}</h4>
+                               
+          {php $chilid = intval($r[catid])}
+ 
+         {pc:get sql="select * from allwww_category where parentid=$chilid order by listorder ASC" return="child"}
+          <div class="list-item none" {if $CATEGORYS[$CAT[parentid]][catid]==$chilid }style="display: block;"{/if}>
+         {loop $child $c}
+          <p><a {if $catid==$c[catid]} class="xuanz" {/if} href="{$c[url]}" >{$c[catname]}</a></p>
+         {/loop}
+          </div>
+         {/pc}
+          
+                {/if}          
+              </li>
+{/loop}
+     {/pc}  
+             
+            </ul>
+            <script type="text/javascript" language="javascript">
+                navList(12);
+            </script>
+          </div>
+       </div>
+       <div class="gonggao_div">
+       <div class="gonggao_title">交易所公告</div>
+       <div class="news_list">
+        <ul>
+{pc:content  action="lists" catid="22" order="listorder DESC" num="6"}
+ {loop $data $key $val}
+ <li> <a href="{$val['url']}">{$val['title']}</a></li>
+ {/loop}
+ {/pc}
+        </ul>
+      </div>
+    </div>
+    <!--公告结束-->
+</div>
