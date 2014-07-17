@@ -436,3 +436,5 @@
 <?php exit;?>07-16 17:47:56 | 2 | strpos() [<a href='function.strpos'>function.strpos</a>]: Empty delimiter | phpcms\libs\functions\autoload\video.func.php | 111
 <?php exit;?>07-16 17:47:56 | 2 | strpos() [<a href='function.strpos'>function.strpos</a>]: Empty delimiter | phpcms\libs\functions\autoload\video.func.php | 111
 <?php exit;?>07-16 17:47:56 | 2 | strpos() [<a href='function.strpos'>function.strpos</a>]: Empty delimiter | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>07-17 13:50:44 | 2 | strpos() [<a href='function.strpos'>function.strpos</a>]: Empty delimiter | phpcms\libs\functions\autoload\video.func.php | 111
+<?php exit;?>07-17 13:50:44 | 2 | strpos() [<a href='function.strpos'>function.strpos</a>]: Empty delimiter | phpcms\libs\functions\autoload\video.func.php | 111
